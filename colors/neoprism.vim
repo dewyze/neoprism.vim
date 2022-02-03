@@ -147,17 +147,19 @@ else
   let s:base5 = [bases[4], 250]
 endif
 
-let s:red           = ['#DC657D', 168]
-let s:green         = ['#84B97C', 108]
-let s:yellow        = ['#D4AE58', 179]
+" let s:red           = ['#DC657D', 168]
 let s:blue          = ['#639EE4', 74]
-let s:purple        = ['#B888E2', 140]
+let s:brown         = ['#AE8785', 138]
+let s:golden_yellow = ['#C99720', 180]
+let s:green         = ['#84B97C', 108]
+let s:light_blue    = ['#72C7D1', 80]
 let s:orange        = ['#E18254', 173]
 let s:pink          = ['#E69CA0', 181]
+let s:purple        = ['#B294BB', 140]
+let s:red           = ['#cc6666', 168]
+let s:royal_blue    = ['#648CB4', 66]
 let s:teal          = ['#4BB1A7', 73]
-let s:golden_yellow = ['#C99720', 180]
-let s:light_blue    = ['#72C7D1', 80]
-let s:brown         = ['#AE8785', 138]
+let s:yellow        = ['#D4AE58', 179]
 
 if g:neoprism#use_256color == 1
   let s:base1[0] = '#303030'
@@ -387,5 +389,66 @@ hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
 " }}}
+
+" Tree-sitter
+call s:hi('TSBoolean', s:purple, '', '')
+call s:hi('TSConditional', s:orange, '', '')
+call s:hi('TSComment', s:base4, '', '')
+call s:hi('TSFunction', s:yellow, '', '')
+call s:hi('TSKeywordFunction', s:orange, '', '')
+call s:hi('TSKeyword', s:orange, '', '')
+call s:hi('TSLabel', s:teal, '', '')
+call s:hi('TSOperator', s:base5, '', '')
+call s:hi('TSParameter', s:base5, '', '')
+call s:hi('TSString', s:green, '', '')
+call s:hi('TSSymbol', s:royal_blue, '', '')
+call s:hi('TSType', s:red, '', '')
+call s:hi('TSVariable', s:base5, '', '')
+call s:hi('TSStringSpecial', s:pink, '', '')
+call s:hi('TSInclude', s:purple, '', '')
+call s:hi('TSFoobar', s:red, '', '')
+" call s:hi('TSConstBuiltin', s:red, '', '')
+
+
+" 'TSAnnotation'
+" 'TSCharacter'
+" 'TSConstant'
+" 'TSConstructor'
+" 'TSFloat'
+" 'TSFuncBuiltin'
+" 'TSFuncMacro'
+" 'TSInclude'
+" 'TSLiteral'
+" 'TSNamespace'
+" 'TSNumber'
+" 'TSParameterReference'
+" 'TSProperty'
+" 'TSTypeBuiltin'
+" 'TSVariable'
+" 'TSAttribute'
+" 'TSConstBuiltin'
+" 'TSConstMacro'
+" 'TSEmphasis'
+" 'TSError'
+" 'TSException'
+" 'TSField'
+" 'TSKeywordFunction'
+" 'TSKeywordOperator'
+" 'TSPunctBracket'
+" 'TSPunctDelimiter'
+" 'TSPunctSpecial'
+" 'TSRepeat'
+" 'TSStringEscape'
+" 'TSStringRegex'
+" 'TSStrong'
+" 'TSStructure'
+" 'TSTag'
+" 'TSTagDelimiter'
+" 'TSText'
+" 'TSTitle'
+" 'TSUnderline'
+" 'TSURI'
+" 'TSVariableBuiltin'
+
 
 set background=dark
