@@ -4,7 +4,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'neodark'
+let g:colors_name = 'neoprism'
 
 " Functions {{{
 function! s:generate_base_colors(base1)
@@ -108,38 +108,38 @@ endfunction
 
 " }}}
 
-if !exists('g:neodark#italics')
-  let g:neodark#italics = 0
+if !exists('g:neoprism#italics')
+  let g:neoprism#italics = 0
 endif
 
-if !exists('g:neodark#use_custom_terminal_theme')
-  let g:neodark#use_custom_terminal_theme = 0
+if !exists('g:neoprism#use_custom_terminal_theme')
+  let g:neoprism#use_custom_terminal_theme = 0
 endif
 
-if !exists('g:neodark#use_256color')
-  let g:neodark#use_256color = 0
+if !exists('g:neoprism#use_256color')
+  let g:neoprism#use_256color = 0
 endif
 
-if !exists('g:neodark#background')
-  let g:neodark#background = ''
+if !exists('g:neoprism#background')
+  let g:neoprism#background = ''
 endif
 
-if !exists('g:neodark#terminal_transparent')
-  let g:neodark#terminal_transparent = 0
+if !exists('g:neoprism#terminal_transparent')
+  let g:neoprism#terminal_transparent = 0
 endif
 
-if !exists('g:neodark#solid_vertsplit')
-  let g:neodark#solid_vertsplit = 0
+if !exists('g:neoprism#solid_vertsplit')
+  let g:neoprism#solid_vertsplit = 0
 endif
 
-if g:neodark#background == ''
+if g:neoprism#background == ''
   let s:base1 = ['#1F2F38', 236]
   let s:base2 = ['#263A45', 237]
   let s:base3 = ['#475C69', 59]
   let s:base4 = ['#658595', 245]
   let s:base5 = ['#AABBC4', 250]
 else
-  let bases = s:generate_base_colors(g:neodark#background)
+  let bases = s:generate_base_colors(g:neoprism#background)
   let s:base1 = [bases[0], 236]
   let s:base2 = [bases[1], 237]
   let s:base3 = [bases[2], 59]
@@ -159,7 +159,7 @@ let s:golden_yellow = ['#C99720', 180]
 let s:light_blue    = ['#72C7D1', 80]
 let s:brown         = ['#AE8785', 138]
 
-if g:neodark#use_256color == 1
+if g:neoprism#use_256color == 1
   let s:base1[0] = '#303030'
   let s:base2[0] = '#3a3a3a'
   let s:base3[0] = '#5f5f5f'
@@ -179,7 +179,7 @@ if g:neodark#use_256color == 1
   let s:brown[0]         = '#af8787'
 endif
 
-if g:neodark#use_custom_terminal_theme == 1
+if g:neoprism#use_custom_terminal_theme == 1
   let s:base1[1] = 0
   let s:base2[1] = 8
   let s:base3[1] = 13
@@ -200,7 +200,7 @@ if g:neodark#use_custom_terminal_theme == 1
 endif
 
 " Transparent Background
-if g:neodark#terminal_transparent == 1
+if g:neoprism#terminal_transparent == 1
   let s:base1[1] = 'none' " This doesn't work well for airline
 end
 
@@ -231,7 +231,7 @@ let g:terminal_ansi_colors = [s:base1[0], s:red[0], s:green[0], s:yellow[0],
 
 function! s:hi(group, fg, bg, attr)
   let l:attr = a:attr
-  if g:neodark#italics == 0 && l:attr ==? 'italic'
+  if g:neoprism#italics == 0 && l:attr ==? 'italic'
     let l:attr = 'none'
   endif
 
@@ -292,7 +292,7 @@ call s:hi('WarningMsg',                s:red,           '',              '')
 call s:hi('WildMenu',                  s:base2,         s:green,	       '')
 
 " Solid bar for vertical split
-if g:neodark#solid_vertsplit == 1
+if g:neoprism#solid_vertsplit == 1
   call s:hi('VertSplit',                 s:base2,      s:base2,    'none')
 else
   call s:hi('VertSplit',                 s:base4,      s:base1,    'none')

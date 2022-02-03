@@ -1,68 +1,71 @@
-*neodark.txt*				Modified: 2022 Jan
+*neoprism.txt*				Modified: 2022 Jan
 
 
-	    neodark.vim - Dark Colorscheme by Keita Nakamura~
+	    neoprism.vim - Dark Colorscheme by John DeWyze
+			   Based on KeitaNakamura/neodark.vim and Original
+			   RailsCasts theme.
 
 
-							*neodark*
-Neodark is a Vim colorscheme that runs in GUI or 256 color mode and includes
+
+							*neoprism*
+Neoprism is a Vim colorscheme that runs in GUI or 256 color mode and includes
 themes for terminal colors, tmux and |status-line| plugins.
 
 For screenshots, updates and more details please visit:
-https://github.com/KeitaNakamura/neodark.vim
+https://github.com/KeitaNakamura/neoprism.vim
 
-1. Install				|neodark-install|
-2. Options			    	|neodark-options|
-3. Airline and lightline Themes		|neodark-statusline|
-4. Terminal Themes		    	|neodark-terminal|
-5. tmux				    	|neodark-tmux|
-6. Inspiration and Special Thanks   	|neodark-thanks|
+1. Install				|neoprism-install|
+2. Options			    	|neoprism-options|
+3. Airline and lightline Themes		|neoprism-statusline|
+4. Terminal Themes		    	|neoprism-terminal|
+5. tmux				    	|neoprism-tmux|
+6. Inspiration and Special Thanks   	|neoprism-thanks|
 
 ==============================================================================
-1. Install						*neodark-install*
+1. Install						*neoprism-install*
 
-Neodark can be installed by maually moving the files to their appropriated
+Neoprism can be installed by maually moving the files to their appropriated
 directories, using the native |packages| system or with a custom plugin
 manager. For |vim-plug|: >
 
-	Plug 'KeitaNakamura/neodark.vim'
+	Plug 'KeitaNakamura/neoprism.vim'
 	set termguicolors    "recommended
-	colorscheme neodark
+	colorscheme neoprism
 <
 ==============================================================================
-2. Options						*neodark-options*
+2. Options						*neoprism-options*
 
 Supported options can be controlled by setting global variables (|g:|).
 Boolean options are set with numbers `1` or `0` for true and false,
 respectively.
 
- *g:neodark#background*		{string} Default: ''
+ *g:neoprism#background*		{string} Default: ''
 				Hex color value used as custom background. >
-				    let g:neodark#background = '#202020'
+				    let g:neoprism#background = '#202020'
 <
- *g:neodark#use_256color*	{boolean} Default: 0
+ *g:neoprism#use_256color*	{boolean} Default: 0
 				Use 256-color in both vim and gvim.
 
- *g:neodark#terminal_transparent* {boolean} Default: 0
+ *g:neoprism#terminal_transparent* {boolean} Default: 0
 				Use your default terminal background.
 
- *g:neodark#solid_vertsplit*	{boolean} Default: 0
+ *g:neoprism#solid_vertsplit*	{boolean} Default: 0
 				Enable solid vertical split, matching the
 				statusline.
 
- *g:neodark#use_custom_terminal_theme*
+ *g:neoprism#use_custom_terminal_theme*
 				{boolean} Default: 0
 				Use the native terminal colors.
-				See |neodark-terminal|.
+				See |neoprism-terminal|.
 
 ==============================================================================
-3. Airline and lightline Themes				*neodark-statusline*
-					*neodark-airline* *neodark-lightline*
+3. Airline and lightline Themes				*neoprism-statusline*
+	  			       *neoprism-airline* *neoprism-lightline*
 
 Themes for |airline| and |lightline| are included. To enable in lightline: >
 
 	let g:lightline = {}
-	let g:lightline.colorscheme = 'neodark'
+	let g:lightline.colorscheme = 'neoprism'
 <
 For airline, just use!
 
@@ -70,12 +73,12 @@ For airline, just use!
  - lightline: https://github.com/itchyny/lightline.vim
 
 ==============================================================================
-4. Terminal Themes					*neodark-terminal*
+4. Terminal Themes					*neoprism-terminal*
 
 Custom terminal themes are also available (see |term| folder).
 
 If you use a terminal which doesn't support true color like Terminal.app, you
-can get a true color scheme by enabling |g:neodark#use_custom_terminal_theme|.
+can get a true color scheme by enabling |g:neoprism#use_custom_terminal_theme|.
 
 ==============================================================================
 5. tmux
@@ -83,18 +86,16 @@ can get a true color scheme by enabling |g:neodark#use_custom_terminal_theme|.
 You can set tmux colors with: >
 	cat tmuxcolors.conf >> ~/.tmux.conf
 or >
-	set -g @plugin 'KeitaNakamura/neodark.vim'
+	set -g @plugin 'KeitaNakamura/neoprism.vim'
 <
 in `.tmux.conf` with Tmux Plugin Manager (https://github.com/tmux-plugins/tpm).
 
 ==============================================================================
 6. Inspiration and Special Thanks
 
- - tyrannicaltoucan/vim-deep-space
-   https://github.com/tyrannicaltoucan/vim-deep-space
- - tyrannicaltoucan/vim-quantum
-   https://github.com/tyrannicaltoucan/vim-quantum
- - joshdick/onedark.vim
-   https://github.com/joshdick/onedark.vim
+ - KeitaNakamura/neodark.vim
+   https://github.com/KeitaNakamura/neodark.vim
+ - ryanb - RailsCasts
+   http://railscasts.com/
 
  vim:tw=78:ts=8:noet:ft=help:norl:
