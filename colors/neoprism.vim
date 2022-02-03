@@ -133,11 +133,11 @@ if !exists('g:neoprism#solid_vertsplit')
 endif
 
 if g:neoprism#background == ''
-  let s:base1 = ['#1F2F38', 236]
-  let s:base2 = ['#263A45', 237]
-  let s:base3 = ['#475C69', 59]
-  let s:base4 = ['#658595', 245]
-  let s:base5 = ['#AABBC4', 250]
+  let s:base1 = ['#282828', 236]
+  let s:base2 = ['#333333', 237]
+  let s:base3 = ['#4C4C4C', 59]
+  let s:base4 = ['#727272', 245]
+  let s:base5 = ['#B2B2B2', 250]
 else
   let bases = s:generate_base_colors(g:neoprism#background)
   let s:base1 = [bases[0], 236]
